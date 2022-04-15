@@ -1,0 +1,321 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+:root
+{
+    --primary-color:#d65108;
+    --secondary-color:#b54507;
+}
+
+body
+{
+   font-weight:300;
+   font-size:1.2rem;
+   line-height:30px;
+   
+    
+}
+
+.title
+{
+    margin:1.0rem;
+    font-size:1.9rem;
+    color:var(--primary-color);
+    font-weight:700;
+}
+.container
+{
+  min-height:100vh;
+    
+}
+
+.meal-wrapper
+{
+    margin:0 auto;
+    padding:1.02rem;
+    background:#fff;
+    text-align:center;
+}
+
+
+.search-meal-box
+{
+    width:85%;
+    margin:1.02rem 0;
+    font-size:;
+    padding:6px;
+    border-radius:20px;
+    border-color:var(--secondary-color);
+   color:var(--primary-color) !important;
+   font-weight:600;
+    
+    
+}
+
+.fas
+{
+    padding:5px;
+    font-size:25px;
+}
+
+#search-btn
+{
+    height:45px;
+    border-radius:13px;
+    border:none;
+    border-color:var(--secondary-color);
+    background:var(--primary-color);
+    color:#fff;
+  border:2.5px solid var(--secondary-color);
+}
+
+.search-btn:hover
+{
+    background-color:var(--secondary-color);
+}
+
+
+
+.meal-result
+{
+    margin-top:4rem;
+}
+
+#meal
+{
+    margin:2.05rem 0;
+    width:300px;
+}
+
+.meal-items
+{
+    border-radius:1rem;
+    overflow:hidden;
+    box-shadow:0 14px 21px -12px rgba(0,0,0,0.78);
+    margin:2rem 0;
+    
+}
+
+.meal-img img
+{
+    width:100%;
+    display:block;
+}
+
+.meal-name 
+{
+    padding:1.12rem 0.5rem ;
+}
+.meal-name h3
+{
+    font-size:1.7rem;
+}
+
+.recipe-btn
+{
+    text-decoration:none;
+    width:150px;
+    border-radius:30px;
+    padding:10px 8px;
+    color:#fff;
+    background-color:var(--primary-color);
+    font-size:1.2rem;
+    font-weight:500;
+    margin:2px auto;
+    display:block;
+}
+
+.recipe-btn:hover
+{
+    background-color:var(--secondary-color);
+}
+
+.not-found
+{
+    grid-template-columns:1fr !important;
+    font-size:1.8rem;
+    font-weight:600;
+    color:var(--primary-color);
+    width:100%;
+}
+
+/*   media query */
+
+@media screen and (max-width:990px)
+{
+  #meal
+  {
+    margin-right:70%;
+    
+  }
+}
+@media screen and (min-width:600px)
+{
+    .search-meal-box
+    {
+        
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media screen and (min-width:768px)
+{
+    #meal
+    {
+        width:1150px;
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:2rem;
+    }
+    
+     .meal-details p{
+        padding:2rem 0;
+    }
+    
+    .recipe-meal-img img
+    {
+        width:80%;
+        height:80%;
+        border-radius:50%;
+    }
+    
+    
+}
+
+
+
+/* popup meal details   */
+
+.meal-details
+{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#fff;
+    background:var(--primary-color);
+    border-radius:13px;
+    width:94%;
+    height:93%;
+    overflow-y:scroll;
+    padding:2rem 4px;
+    
+    display:none;
+    
+}
+
+.meal-details p:not(.category-name){
+    padding:1rem 0;
+}
+
+/* scroll bar */
+.meal-details::-webkit-scrollbar
+{
+  width:6px;  
+}
+
+.meal-details::-webkit-scrollbar-thumb
+{
+    background:#f0f0f0;
+    border-radius:2rem;
+}
+
+/* recipe close btn */
+.recipe-close-btn
+{
+  position:absolute; 
+  right:10px; 
+  top:10px;
+  font-size:1.2rem;
+  width:30px;
+  height:30px;
+  background:#f0f0f0;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+    
+}
+
+.recipe-close-btn:hover
+{
+    opacity:0.8;
+}
+
+.meal-title
+{
+   letter-spacing:1px;
+   margin-bottom:2rem 0; 
+   font-weight:500;
+}
+
+.category-name
+{
+    font-weight:600;
+    color:var(--primary-color);
+    background:#fff;
+    padding:0.4rem 0.3rem;
+    border-radius:0.6rem;    
+    display:inline-block;
+    
+}
+
+.recipe-instruction
+{
+    padding:1rem 0;
+}
+
+.recipe-meal-img img
+{
+    width:100%;
+    height:100%;
+    border-radius:60%;
+    margin-bottom:0 auto;
+    
+}
+
+.recipe-link
+{
+    margin:1.2rem 0;
+    background:#fff;
+    padding:0.3rem 0.3rem;
+    display:inline-block ;
+    border-radius:1rem;
+    color:var(--primary-color);
+    
+}
+.recipe-link a
+{
+    text-decoration:none;
+    color:#fff;
+    font-size:1.2rem;
+    font-weight:600;
+    margin-top:3px;
+    color:var(--primary-color);
+        
+}
+
+.recipe-link a:hover
+{
+   opacity:0.8; 
+}
+
+
+.meal-content-details
+{
+    margin:1.2rem 0;
+}
+
+
+/*  js related class */
+
+.showRecipe
+{
+    display:block;
+}
+
+
